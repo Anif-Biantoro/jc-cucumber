@@ -1,10 +1,13 @@
 Feature: Login funcionality
+
+  @End2EndTest
   Scenario: Successful login with valid credentials
     Given I am on the OrangeHRM login page
     When I enter a valid username and password
     And I click on the login button
     Then I should be redirected to the dashboard
 
+    @RegressionTest
   Scenario: Unsuccessful login with invalid username
     Given I am on the OrangeHRM login page
     When I enter an invalid username and a valid password
